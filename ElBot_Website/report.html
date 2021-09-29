@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/627909087950143499/820635181915570186/elbot_lappen.png">
+    <title>ElBot - Report</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="navbar">
+          <a href="index"><img class="logo" src="https://cdn.discordapp.com/attachments/627909087950143499/820636887017455666/Unbenannt-1.png"></a>
+          <div class="links">
+            <a href="index">Home</a>
+          </div>
+          <a
+            id="addbot-btn"
+            class="addbot-btn" href="https://bit.ly/3xKypaX">
+            Add Bot
+          </a>
+        </div>
+          <div class="header">
+            <div class="title">
+              <h1>Report A Bug</h1>
+
+              <form action="report-success"
+    method="post" id="email_form">
+
+    <input type="text" name="subject" placeholder="Subject" />
+    <textarea name="text" placeholder="Message"></textarea>
+    <input type="hidden" name="access_token" value="6lzdzmfftk8n1bksvqmk5kr3" />
+    <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
+    <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
+    <input id="submit_form" type="submit" value="Send" />
+</form>
+<script>
+    var submitButton = document.getElementById("submit_form");
+    var form = document.getElementById("email_form");
+    form.addEventListener("submit", function (e) {
+        setTimeout(function() {
+            submitButton.value = "Sending...";
+            submitButton.disabled = true;
+        }, 1);
+    });
+</script>
+
+</div>
+      </div>
+    </div>
+  </body>
+
+</html>
